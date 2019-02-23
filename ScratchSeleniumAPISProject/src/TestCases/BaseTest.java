@@ -9,6 +9,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import TestPages.SignInPage;
 
 public class BaseTest {
 	
@@ -27,7 +29,8 @@ public class BaseTest {
 	}
 	
 	@BeforeMethod
-	public void beforeMethod() {
+	@Parameters({ "userName", "passWord" })
+	public void beforeMethod(String userName, String passWord) {
 		driver.get(expectedURL);
 		String currectURL = driver.getCurrentUrl();
 		Assert.assertEquals(expectedURL, currectURL);
@@ -35,8 +38,12 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
+		SignInPage signInPage = new SignInPage(driver);
+		signInPage.getUserName().sendKeys(userName);
+		signInPage.getUserPassword().sendKeys(passWord);
+		signInPage.getSignIn().click();
+		
 	}
-	
 	
 	@AfterMethod
 	public void afterMethod() {
