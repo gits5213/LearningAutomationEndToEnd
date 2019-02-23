@@ -5,8 +5,19 @@
   <parameter name="userName" value="md83shahnewaz@gmail.com" />
   <parameter name="passWord" value="Shahnewaz1@" />
     <classes>
-      <class name="TestCases.UserAbleToClickOnAddToCard"/>
-      <class name="TestCases.ElementVerification"/>
+    
+      <class name="TestCases.UserAbleToClickOnAddToCard">
+      	 <methods>
+        	<exclude name="userAbleToClickOnAddToCard" />
+      	</methods>
+      </class>
+      
+      <class name="TestCases.ElementVerification">
+       	<methods>
+        	<include name="userAbleToValidateUserNameInputField" />
+      	</methods>
+      </class>
+      
     </classes>
   </test>
 </suite>

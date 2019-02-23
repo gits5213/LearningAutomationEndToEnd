@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-Suite1" class="show-methods passed suite-Suite1"> (show)</a> <!-- show-methods passed suite-Suite1 -->
                     </span>
                     <div class="method-list-content passed suite-Suite1">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="TestCases.UserAbleToClickOnAddToCard" class="method navigator-link" hash-for-method="userAbleToClickOnAddToCard">userAbleToClickOnAddToCard</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite1" title="TestCases.ElementVerification" class="method navigator-link" hash-for-method="userAbleToValidateUserNameInputField">userAbleToValidateUserNameInputField</a> <!-- method navigator-link -->
@@ -125,21 +120,6 @@
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestCases.UserAbleToClickOnAddToCard</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="userAbleToClickOnAddToCard">
-                  </a> <!-- userAbleToClickOnAddToCard -->
-                  <span class="method-name">userAbleToClickOnAddToCard</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
-          <div class="suite-Suite1-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">TestCases.ElementVerification</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -155,7 +135,7 @@
         </div> <!-- panel Suite1 -->
         <div panel-name="test-xml-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/mdzaman/git/repository/ScratchSeleniumAPISProject/src/testng.xml</span>
+            <span class="header-content">/Users/mdzaman/Documents/LearningAutomationEndToEnd/ScratchSeleniumAPISProject/src/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -163,9 +143,19 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Regression&quot;&gt;
+    &lt;parameter name=&quot;passWord&quot; value=&quot;Shahnewaz1@&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;md83shahnewaz@gmail.com&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestCases.UserAbleToClickOnAddToCard&quot;/&gt;
-      &lt;class name=&quot;TestCases.ElementVerification&quot;/&gt;
+      &lt;class name=&quot;TestCases.UserAbleToClickOnAddToCard&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;userAbleToClickOnAddToCard&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- TestCases.UserAbleToClickOnAddToCard --&gt;
+      &lt;class name=&quot;TestCases.ElementVerification&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;userAbleToValidateUserNameInputField&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- TestCases.ElementVerification --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Regression --&gt;
 &lt;/suite&gt; &lt;!-- Suite1 --&gt;
@@ -205,20 +195,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'userAbleToClickOnAddToCard')
-data.setCell(0, 2, 'TestCases.UserAbleToClickOnAddToCard')
-data.setCell(0, 3, 10640);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'userAbleToValidateUserNameInputField')
-data.setCell(1, 2, 'TestCases.ElementVerification')
-data.setCell(1, 3, 2070);
+data.setCell(0, 1, 'userAbleToValidateUserNameInputField')
+data.setCell(0, 2, 'TestCases.ElementVerification')
+data.setCell(0, 3, 2102);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -233,9 +219,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.UserAbleToClickOnAddToCard</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">userAbleToClickOnAddToCard</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite1" class="panel">
@@ -244,49 +237,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.UserAbleToClickOnAddToCard</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCases.ElementVerification</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">1860 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">userAbleToClickOnAddToCard</span>
-                <span class="method-start">4484 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">15126 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">15127 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.ElementVerification</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">15244 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">16165 ms</span>
+                <span class="method-name">beforeMethod(md83shahnewaz@gmail.com, Shahnewaz1@)</span>
+                <span class="method-start">1422 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userAbleToValidateUserNameInputField</span>
-                <span class="method-start">18331 ms</span>
+                <span class="method-start">5214 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">20403 ms</span>
+                <span class="method-start">7318 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">20403 ms</span>
+                <span class="method-start">7319 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
