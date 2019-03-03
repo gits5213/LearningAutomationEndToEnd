@@ -8,7 +8,7 @@
     
       <class name="TestCases.UserAbleToClickOnAddToCard">
       	 <methods>
-        	<exclude name="userAbleToClickOnAddToCard" />
+        	<include name="userAbleToClickOnAddToCard" />
       	</methods>
       </class>
       

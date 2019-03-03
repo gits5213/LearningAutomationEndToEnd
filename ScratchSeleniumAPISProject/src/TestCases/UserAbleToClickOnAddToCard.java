@@ -22,9 +22,9 @@ public class UserAbleToClickOnAddToCard extends BaseTest{
 	
 		if(homePage.getSearchBox().isEnabled() && homePage.getSearchBox().isDisplayed()) {
 			homePage.getSearchBox().clear();
-			homePage.getSearchBox().sendKeys("iPhone");
+			homePage.getSearchBox().sendKeys(ObjectRepo.phoneTypes);
 		}else {
-			System.out.println("InputFiled is disable!");
+			System.out.println(ObjectRepo.inputFieldText);
 		}
 		
 		Thread.sleep(2000);
